@@ -78,6 +78,6 @@ ExamProcess.on('close',(code)=>{
 
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is rng on port ${port}`);
   console.log(`${url}`);
 });
