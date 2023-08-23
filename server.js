@@ -24,7 +24,7 @@ console.log('Toughness:', toughness);
 const pythonScriptPath = path.join(__dirname, 'scripts', 'logisticRegression.py');
 
   
-  const pythonProcess = spawn('python', [pythonScriptPath, outlook, temperature, humidity, windy]);
+  const ExamProcess = spawn('python', [pythonScriptPath, toughness, hour, consist, syllabus, time]);
   
 
 ExamProcess.stdout.on('data',(data)=>{
