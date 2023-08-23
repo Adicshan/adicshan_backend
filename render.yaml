@@ -1,8 +1,15 @@
 # render.yaml
-
-build:
-  command: pip install -r requirement.txt
-
-env:
-  - name: PYTHONUNBUFFERED
-    value: "1"
+services:
+  - name: adicshan_backend
+    type: web
+    buildCommand: python build.py
+    env:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    dependencies:
+      - type: pip
+        name: pandas
+        version: 1.3.3  # Use the correct version here
+      - type: pip
+        name: scikit-learn
+        version: 0.24.2  # Use the correct version here
