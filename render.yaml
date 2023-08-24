@@ -9,6 +9,4 @@ buildCommand: |
 # Specify the run command (adjust as per your project's needs)
 runCommand: python logisticRegression.py
 
-# Specify the environment variables (if needed)
-env:
-  MY_ENV_VARIABLE: my_value
+#
