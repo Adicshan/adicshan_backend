@@ -9,4 +9,3 @@ buildCommand: |
 # Specify the run command (adjust as per your project's needs)
 runCommand: python logisticRegression.py
 
-#
