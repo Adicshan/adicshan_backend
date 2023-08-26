@@ -27,6 +27,7 @@ app.post('/exam', (req, res) => {
   
 
 console.log('Toughness:', toughness);
+  res.send("i am in  exam section");
 const pythonScriptPath = path.join(__dirname, 'scripts', 'logisticRegression.py');
 
   
