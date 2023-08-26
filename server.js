@@ -12,7 +12,13 @@ const cors=require('cors');
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://deploy-mern-lwhq.vercel.app"],
+    methods:["POST","GET"],
+    credentials: true
+  }
+));
 
 
 
