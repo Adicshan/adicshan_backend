@@ -50,6 +50,6 @@ ExamProcess.on('close',(code)=>{
 
 
 app.listen(port, () => {
-  console.log(`Server is rirrrrrrrrrrrrrrnng on port ${port}`);
+  console.log(`Server is rrnng on port ${port}`);
   console.log(`${url}`);
 });
