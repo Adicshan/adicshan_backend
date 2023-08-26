@@ -53,6 +53,6 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is ng on port ${port}`);
-  res.send("hello world");
+  
   console.log(`${url}`);
 });
