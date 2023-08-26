@@ -21,8 +21,26 @@ app.post('/exam', (req, res) => {
   
 
 console.log('Toughness:', toughness);
+const pythonScriptPath = path.join(__dirname, 'scripts', 'logisticRegression.py');
 
-res.send({message:"hello workd"});
+  
+  const ExamProcess = spawn('python', [pythonScriptPath, toughness, hour, consist, syllabus, time]);
+  
+
+ExamProcess.stdout.on('data',(data)=>{
+const output= data.toString();
+console.log('Python output:',output);
+res.send({ output: output });
+});
+ExamProcess.stderr.on('data',(data)=>{
+  const error=data.toString();
+  console.log('Python error:',error);
+});
+ExamProcess.on('close',(code)=>{
+  console.log(`python process execute with code ${code}`);
+});
+
+
 });
 
 
