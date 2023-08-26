@@ -36,7 +36,7 @@ const pythonScriptPath = path.join(__dirname, 'scripts', 'logisticRegression.py'
 ExamProcess.stdout.on('data',(data)=>{
 const output= data.toString();
 console.log('Python output:',output);
-res.status(200).json({output:output});
+res.send({ output: output });
 });
 ExamProcess.stderr.on('data',(data)=>{
   const error=data.toString();
@@ -51,5 +51,6 @@ ExamProcess.on('close',(code)=>{
 
 app.listen(port, () => {
   console.log(`Server is rrnng on port ${port}`);
+  res.send("hello world");
   console.log(`${url}`);
 });
