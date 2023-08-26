@@ -24,13 +24,13 @@ console.log('Toughness:', toughness);
 const pythonScriptPath = path.join(__dirname, "..","server",'scripts', 'logisticRegression.py');
 
   
-  const ExamProcess = spawn('python', [pythonScriptPath, toughness, hour, consist, syllabus, time]);
+  const ExamProcess = spawn('python3', [pythonScriptPath, toughness, hour, consist, syllabus, time]);
   
 
 ExamProcess.stdout.on('data',(data)=>{
 const output= data.toString();
 console.log('Python output:',output);
-res.send({ output: output });
+res.status(200).json({output:output});
 });
 ExamProcess.stderr.on('data',(data)=>{
   const error=data.toString();
