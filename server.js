@@ -49,7 +49,7 @@ ExamProcess.on('close',(code)=>{
 
 });
 app.get('/', (req, res) => {
-  res.send("Server is up and running!");
+  res.send("Server is  running!");
 });
 
 app.listen(port, () => {
