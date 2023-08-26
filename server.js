@@ -47,7 +47,9 @@ ExamProcess.on('close',(code)=>{
 });
 
 });
-
+app.get('/', (req, res) => {
+  res.send("Server is up and running!");
+});
 
 app.listen(port, () => {
   console.log(`Server is ng on port ${port}`);
