@@ -50,7 +50,7 @@ ExamProcess.on('close',(code)=>{
 
 
 app.listen(port, () => {
-  console.log(`Server is rrnng on port ${port}`);
+  console.log(`Server is ng on port ${port}`);
   res.send("hello world");
   console.log(`${url}`);
 });
